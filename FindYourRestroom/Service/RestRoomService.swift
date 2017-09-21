@@ -15,6 +15,13 @@ class RestRoomService {
     
     class func getRestRooms(completion: @escaping RestRoomsResult) {
         FetchDataManager.get(url: URLManager.urlForRestrooms()).responseArray(queue: nil, keyPath: "records", context: nil) { (result: DataResponse<[RestRoom]>) in
+            if let restRooms = result.result.value {
+                do {
+                    try RealmManager.addOrUpdate(objects: restRooms)
+                } catch {
+                    print("REST ROOM NOT SAVE ERROR")
+                }
+            }
             completion(result.result.value ?? [], result.result.error)
         }
     }

@@ -47,6 +47,6 @@ class RestRoom: Object, Mappable {
     }
     
     func updateFavorite(valueFavorite: Bool) {
-        try! RealmManager.update(type: RestRoom.self, changes: ["favorite": valueFavorite as AnyObject])
+        try! RealmManager.update(type: RestRoom.self, changes: ["id": self.id as AnyObject, "favorite": valueFavorite as AnyObject])
     }
 }
