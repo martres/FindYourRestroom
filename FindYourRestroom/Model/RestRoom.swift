@@ -19,6 +19,7 @@ class RestRoom: Object, Mappable {
     dynamic var openDate = ""
     dynamic var longitude = 0.0
     dynamic var latitude = 0.0
+    dynamic var favoris = false
     
     override static func primaryKey() -> String {
         return "id"
@@ -27,7 +28,7 @@ class RestRoom: Object, Mappable {
     required convenience init?(map: Map) {
         self.init()
     }
-    
+        
     func mapping(map: Map) {
         id              <- map["fields.objectid"]
         arrondissement  <- map["fields.arrondissement"]
