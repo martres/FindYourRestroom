@@ -29,7 +29,7 @@ class NavigationManager {
         }, completion: nil)
     }
     
-    class func showViewDetail(fromVc: UIViewController) {
-        
+    class func showViewDetail(fromVc: UIViewController, restRoom: RestRoom) {
+        let vc =
     }
 }
