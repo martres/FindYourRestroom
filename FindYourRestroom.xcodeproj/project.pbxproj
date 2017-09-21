@@ -22,6 +22,7 @@
 		6522519F1F73E7B800238CA3 /* FavorisRestRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522519E1F73E7B800238CA3 /* FavorisRestRoomViewModel.swift */; };
 		652251A11F73E90E00238CA3 /* FetchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652251A01F73E90E00238CA3 /* FetchDataManager.swift */; };
 		652251A41F73F04700238CA3 /* RestRoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652251A31F73F04700238CA3 /* RestRoomService.swift */; };
+		65A7F09C1F746EC200501465 /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A7F09B1F746EC200501465 /* CLLocationExtension.swift */; };
 		65B1B2341F73F8FE008683F1 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B1B2331F73F8FE008683F1 /* LoadingViewController.swift */; };
 		65B1B2361F73F90C008683F1 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B1B2351F73F90C008683F1 /* LoadingViewModel.swift */; };
 		65B1B2381F73FF33008683F1 /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B1B2371F73FF33008683F1 /* RealmExtension.swift */; };
@@ -53,6 +54,7 @@
 		6522519E1F73E7B800238CA3 /* FavorisRestRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorisRestRoomViewModel.swift; sourceTree = "<group>"; };
 		652251A01F73E90E00238CA3 /* FetchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDataManager.swift; sourceTree = "<group>"; };
 		652251A31F73F04700238CA3 /* RestRoomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRoomService.swift; sourceTree = "<group>"; };
+		65A7F09B1F746EC200501465 /* CLLocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationExtension.swift; sourceTree = "<group>"; };
 		65B1B2331F73F8FE008683F1 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		65B1B2351F73F90C008683F1 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
 		65B1B2371F73FF33008683F1 /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				65B1B2371F73FF33008683F1 /* RealmExtension.swift */,
+				65A7F09B1F746EC200501465 /* CLLocationExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				65B1B2341F73F8FE008683F1 /* LoadingViewController.swift in Sources */,
 				6522519F1F73E7B800238CA3 /* FavorisRestRoomViewModel.swift in Sources */,
 				652251941F73E66600238CA3 /* ListRestRoomViewModel.swift in Sources */,
+				65A7F09C1F746EC200501465 /* CLLocationExtension.swift in Sources */,
 				6522518A1F73E1F700238CA3 /* RestRoom.swift in Sources */,
 				65CF8AF41F7417D5008A2939 /* RestRoomAnnotation.swift in Sources */,
 				652251921F73E65900238CA3 /* MapRestRoomViewModel.swift in Sources */,

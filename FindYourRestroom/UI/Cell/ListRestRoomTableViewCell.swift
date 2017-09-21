@@ -12,4 +12,8 @@ class ListRestRoomTableViewCell: UITableViewCell {
 
     static var identifier = "ListRestRoomTableViewCell"
     
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var adresseLabel: UILabel!
+    @IBOutlet weak var openingDateLabel: UILabel!
+    @IBOutlet weak var arrondissementLabel: UILabel!
 }

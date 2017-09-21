@@ -347,10 +347,13 @@
                         <viewLayoutGuide key="safeArea" id="evJ-Vo-dUM"/>
                     </view>
                     <navigationItem key="navigationItem" title="LIST" id="8dz-TK-gfO"/>
+                    <connections>
+                        <outlet property="restRoomTableView" destination="4Ve-Ij-H4M" id="1t5-zs-cmj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfl-hu-YSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1298" y="633"/>
+            <point key="canvasLocation" x="1297" y="573"/>
         </scene>
         <!--List-->
         <scene sceneID="FPF-9f-KJF">

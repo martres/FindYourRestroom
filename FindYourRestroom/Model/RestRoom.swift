@@ -49,4 +49,20 @@ class RestRoom: Object, Mappable {
     func updateFavorite(valueFavorite: Bool) {
         try! RealmManager.update(type: RestRoom.self, changes: ["id": self.id as AnyObject, "favorite": valueFavorite as AnyObject])
     }
+    
+    func getArrondissement() -> String {
+        if let nbrArrondissement = Int(self.arrondissement) {
+            switch nbrArrondissement {
+            case 1:
+                return self.arrondissement + "st"
+            case 2:
+                return self.arrondissement + "nd"
+            case 3:
+                return self.arrondissement + "rd"
+            default:
+                return self.arrondissement + "th"
+            }
+        }
+        return self.arrondissement
+    }
 }

@@ -41,4 +41,5 @@ class UserLocationManager: NSObject, CLLocationManagerDelegate {
         }
     }
     
+    
 }

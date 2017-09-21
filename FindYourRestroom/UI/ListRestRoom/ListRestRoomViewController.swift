@@ -21,12 +21,16 @@ class ListRestRoomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initRestRoomTableView()
+        
+        if listModel == nil {
+            listModel = ListRestRoomViewModel()
+        }
     }
     
     func initRestRoomTableView() {
         restRoomTableView.delegate = self
         restRoomTableView.dataSource = self
-        restRoomTableView.estimatedRowHeight = 70
+        restRoomTableView.estimatedRowHeight = 80
         restRoomTableView.rowHeight = UITableViewAutomaticDimension
         
         let nib = UINib(nibName: ListRestRoomTableViewCell.identifier, bundle: nil)
@@ -37,7 +41,11 @@ class ListRestRoomViewController: UIViewController {
 extension ListRestRoomViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let model = listModel else {
+            return
+        }
+        NavigationManager.showViewDetail(restRoom: model.restRooms[indexPath.row])
     }
     
 }
@@ -53,9 +61,13 @@ extension ListRestRoomViewController: UITableViewDataSource {
     }
     
     func makeListRestRoomCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListRestRoomTableViewCell.identifier, for: indexPath) as? ListRestRoomTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListRestRoomTableViewCell.identifier, for: indexPath) as? ListRestRoomTableViewCell, let model = listModel else {
             return UITableViewCell()
         }
+        cell.distanceLabel.text = model.getDistance(atIndex: indexPath.row)
+        cell.adresseLabel.text = model.getAdresse(atIndex: indexPath.row)
+        cell.arrondissementLabel.text = model.getArrondissement(atIndex: indexPath.row)
+        cell.openingDateLabel.text = model.getOpeningDate(atIndex: indexPath.row)
         return cell
     }
     

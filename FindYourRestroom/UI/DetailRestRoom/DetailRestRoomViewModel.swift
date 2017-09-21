@@ -21,7 +21,7 @@ class DetailRestRoomViewModel {
     }
     
     func getArrondissement() -> String {
-        return restRoom?.arrondissement ?? ""
+        return restRoom?.getArrondissement() ?? ""
     }
     
     func getCoordinates() -> String {
