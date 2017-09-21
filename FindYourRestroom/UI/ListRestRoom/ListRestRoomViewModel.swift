@@ -10,4 +10,11 @@ import Foundation
 
 class ListRestRoomViewModel {
     
+    func numberOfRow(inSection: Int) -> Int {
+        return 0
+    }
+    
+    func numberOfSection() -> Int {
+        return 1
+    }
 }
