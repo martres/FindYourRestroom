@@ -124,8 +124,11 @@ class RealmManager {
     
     class func getPropertiesUpdating<T>(object: T) -> [String: AnyObject] where T:Object {
         var properties = [String:AnyObject]()
+        let ignored = T.ignoredPropertiesUpdating()
         for property in object.objectSchema.properties {
-            properties[property.name] = object.value(forKey: property.name) as AnyObject?
+            if !ignored.contains(property.name) {
+                properties[property.name] = object.value(forKey: property.name) as AnyObject
+            }
         }
         return properties
     }

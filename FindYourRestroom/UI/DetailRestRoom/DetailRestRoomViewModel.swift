@@ -37,6 +37,8 @@ class DetailRestRoomViewModel {
     }
     
     func updateFavorite() {
-        restRoom?.updateFavorite(valueFavorite: restRoom?.favorite ?? false)
+        if let favorite = restRoom?.favorite {
+            restRoom?.updateFavorite(valueFavorite: !favorite)
+        }
     }
 }

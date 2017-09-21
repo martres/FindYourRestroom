@@ -40,6 +40,7 @@ class DetailRestRoomViewController: UIViewController {
     @IBAction func addFavorite(_ sender: Any) {
         favoriteButton.isSelected = !favoriteButton.isSelected
         detailModel.updateFavorite()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "favoriteChange"), object: nil)
     }
     
     @IBAction func share() {

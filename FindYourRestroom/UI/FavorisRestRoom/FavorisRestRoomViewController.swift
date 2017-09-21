@@ -14,6 +14,7 @@ class FavorisRestRoomViewController: UIViewController {
     @IBOutlet weak var noFavorisLabel : UILabel!
 
     var modelFavoris = FavorisRestRoomViewModel()
+    var listRestRoom: ListRestRoomViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,17 +25,26 @@ class FavorisRestRoomViewController: UIViewController {
             
             vc.willMove(toParentViewController: self)
             vc.view.frame = viewContainer.frame
-            view.addSubview(vc.view)
+            viewContainer.addSubview(vc.view)
             addChildViewController(vc)
             vc.didMove(toParentViewController: self)
+            listRestRoom = vc
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NSNotification.Name(rawValue: "favoriteChange"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        reloadData()
+    }
+    
+    func reloadData() {
+        modelFavoris.getData()
+        listRestRoom?.listModel?.restRooms = modelFavoris.restRooms
         viewContainer.isHidden = modelFavoris.restRooms.count == 0
         noFavorisLabel.isHidden = !(modelFavoris.restRooms.count == 0)
+        listRestRoom?.restRoomTableView.reloadData()
     }
 
 }

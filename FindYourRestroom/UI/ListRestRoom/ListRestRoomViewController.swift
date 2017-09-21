@@ -27,11 +27,17 @@ class ListRestRoomViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        restRoomTableView.reloadData()
+    }
+    
     func initRestRoomTableView() {
         restRoomTableView.delegate = self
         restRoomTableView.dataSource = self
         restRoomTableView.estimatedRowHeight = 80
         restRoomTableView.rowHeight = UITableViewAutomaticDimension
+        restRoomTableView.tableFooterView = UIView()
         
         let nib = UINib(nibName: ListRestRoomTableViewCell.identifier, bundle: nil)
         restRoomTableView.register(nib, forCellReuseIdentifier: ListRestRoomTableViewCell.identifier)

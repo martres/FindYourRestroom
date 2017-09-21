@@ -34,6 +34,7 @@
 		65CF8AF61F741942008A2939 /* UserLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CF8AF51F741942008A2939 /* UserLocationManager.swift */; };
 		65CF8AF91F745515008A2939 /* DetailRestRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CF8AF81F745515008A2939 /* DetailRestRoomViewModel.swift */; };
 		65CF8AFB1F745530008A2939 /* DetailRestRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CF8AFA1F745530008A2939 /* DetailRestRoomViewController.swift */; };
+		65D214761F747C8E0039F903 /* ObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D214751F747C8E0039F903 /* ObjectExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		65CF8AF51F741942008A2939 /* UserLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationManager.swift; sourceTree = "<group>"; };
 		65CF8AF81F745515008A2939 /* DetailRestRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRestRoomViewModel.swift; sourceTree = "<group>"; };
 		65CF8AFA1F745530008A2939 /* DetailRestRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRestRoomViewController.swift; sourceTree = "<group>"; };
+		65D214751F747C8E0039F903 /* ObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				65B1B2371F73FF33008683F1 /* RealmExtension.swift */,
 				65A7F09B1F746EC200501465 /* CLLocationExtension.swift */,
+				65D214751F747C8E0039F903 /* ObjectExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				65B1B2361F73F90C008683F1 /* LoadingViewModel.swift in Sources */,
 				652251A41F73F04700238CA3 /* RestRoomService.swift in Sources */,
 				6522518E1F73E5B600238CA3 /* MapRestRoomViewController.swift in Sources */,
+				65D214761F747C8E0039F903 /* ObjectExtension.swift in Sources */,
 				652251A11F73E90E00238CA3 /* FetchDataManager.swift in Sources */,
 				65CF8AF61F741942008A2939 /* UserLocationManager.swift in Sources */,
 				6522518C1F73E58A00238CA3 /* NavigationManager.swift in Sources */,

@@ -17,7 +17,7 @@ class RestRoomService {
         FetchDataManager.get(url: URLManager.urlForRestrooms()).responseArray(queue: nil, keyPath: "records", context: nil) { (result: DataResponse<[RestRoom]>) in
             if let restRooms = result.result.value {
                 do {
-                    try RealmManager.addOrUpdate(objects: restRooms)
+                    try RealmManager.synchronize(objects: restRooms)
                 } catch {
                     print("REST ROOM NOT SAVE ERROR")
                 }

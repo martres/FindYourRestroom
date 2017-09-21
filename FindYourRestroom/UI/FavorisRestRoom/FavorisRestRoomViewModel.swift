@@ -13,7 +13,11 @@ class FavorisRestRoomViewModel {
     var restRooms = [RestRoom]()
     
     init() {
-        restRooms = RestRoomService.getRestRoomSave(withFilter: "favorites = 1")
+        getData()
+    }
+    
+    func getData() {
+        restRooms = RestRoomService.getRestRoomSave(withFilter: "favorite = 1")
     }
     
 }

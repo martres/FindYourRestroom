@@ -42,7 +42,7 @@ class RestRoom: Object, Mappable {
         longitude = arrayCoord?[1] ?? 0
     }
     
-    override static func ignoredProperties() -> [String] {
+    override static func ignoredPropertiesUpdating() -> [String] {
         return ["favorite"]
     }
     
