@@ -12,6 +12,10 @@ class ListRestRoomViewController: UIViewController {
     
     @IBOutlet weak var restRoomTableView : UITableView!
     
+    class func makeFromStoryBoard() -> UIViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListRestRoomViewController")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initRestRoomTableView()

@@ -9,6 +9,10 @@
 import UIKit
 
 class MapRestRoomViewController: UIViewController {
+    
+    class func makeFromStoryBoard() -> UIViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MapRestRoomViewController")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
