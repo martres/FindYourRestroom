@@ -151,10 +151,53 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
+                    <connections>
+                        <segue destination="97g-w8-zmH" kind="relationship" relationship="rootViewController" id="0Jy-WE-Gw2"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6Q-ez-PYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="726" y="1579"/>
+        </scene>
+        <!--Favoris Rest Room View Controller-->
+        <scene sceneID="blX-ia-IsH">
+            <objects>
+                <viewController storyboardIdentifier="FavorisRestRoomViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="97g-w8-zmH" customClass="FavorisRestRoomViewController" customModule="FindYourRestroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XwP-Dr-9Gs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any favorites 😩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Kb-xY-u4W">
+                                <rect key="frame" x="62" y="323" width="251" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.83137254900000002" green="0.88235294119999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPJ-nB-Tf2">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vf6-93-5Ap" firstAttribute="bottom" secondItem="fPJ-nB-Tf2" secondAttribute="bottom" id="0qL-YS-9Lx"/>
+                            <constraint firstItem="fPJ-nB-Tf2" firstAttribute="leading" secondItem="vf6-93-5Ap" secondAttribute="leading" id="EtH-XB-uZM"/>
+                            <constraint firstItem="vf6-93-5Ap" firstAttribute="trailing" secondItem="fPJ-nB-Tf2" secondAttribute="trailing" id="HW2-oT-7PS"/>
+                            <constraint firstItem="3Kb-xY-u4W" firstAttribute="centerY" secondItem="XwP-Dr-9Gs" secondAttribute="centerY" id="IID-uj-ael"/>
+                            <constraint firstItem="3Kb-xY-u4W" firstAttribute="centerX" secondItem="XwP-Dr-9Gs" secondAttribute="centerX" id="NzR-t4-kEK"/>
+                            <constraint firstItem="fPJ-nB-Tf2" firstAttribute="top" secondItem="vf6-93-5Ap" secondAttribute="top" id="eeP-r8-hAJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vf6-93-5Ap"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vjY-Ds-yRY"/>
+                    <connections>
+                        <outlet property="noFavorisLabel" destination="3Kb-xY-u4W" id="Eeo-Kx-CkZ"/>
+                        <outlet property="viewContainer" destination="fPJ-nB-Tf2" id="GTj-zT-Cei"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2o-gG-u0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1458" y="1578"/>
         </scene>
         <!--Detail Rest Room View Controller-->
         <scene sceneID="UZH-4V-4jQ">
@@ -322,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfg-wG-zLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1601" y="1566"/>
+            <point key="canvasLocation" x="2257" y="1578"/>
         </scene>
         <!--LIST-->
         <scene sceneID="MJM-0r-Ywk">
