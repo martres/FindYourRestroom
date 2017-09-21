@@ -41,9 +41,9 @@
 	</dict>
 	<key>CFBundleDisplayName</key>
 	<string>FYR</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We need your location if you want to find a restroom :)</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location if you want to find a restroom :)</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>We need your location if you want to find a restroom :)</string>
 </dict>
 </plist>

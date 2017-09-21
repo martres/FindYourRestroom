@@ -126,7 +126,7 @@
                         <viewLayoutGuide key="safeArea" id="heI-py-Qt8"/>
                     </view>
                     <navigationItem key="navigationItem" title="MAP" id="Nq5-Qa-CA3">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="dD7-ef-0aV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="dD7-ef-0aV">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -182,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfl-hu-YSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1322" y="573"/>
+            <point key="canvasLocation" x="1298" y="633"/>
         </scene>
         <!--List-->
         <scene sceneID="FPF-9f-KJF">

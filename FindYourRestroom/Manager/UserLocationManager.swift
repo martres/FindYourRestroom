@@ -24,21 +24,20 @@ class UserLocationManager: NSObject, CLLocationManagerDelegate {
     
     private override init () {
         super.init()
-        self.locationManager.delegate = self
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.distanceFilter = kCLLocationAccuracyHundredMeters
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = kCLLocationAccuracyHundredMeters
         locationManager.requestAlwaysAuthorization()
-        self.locationManager.startUpdatingLocation()
+        locationManager.startUpdatingLocation()
     }
     
     // MARK: - CLLocationManagerDelegate
     
-    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
-        currentLocation = newLocation
-        let userInfo : NSDictionary = ["location" : currentLocation!]
-        
-        dispatch_async(dispatch_get_main_queue()) { () -> Void in
-            self.delegate.locationDidUpdateToLocation(self.currentLocation!)
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        currentLocation = locations[0]
+        manager.stopUpdatingLocation()
+        DispatchQueue.main.async {
+            self.delegate.locationDidUpdateToLocation(location: self.currentLocation!)
         }
     }
     
