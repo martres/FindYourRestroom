@@ -17,6 +17,11 @@ class LoadingViewController: UIViewController {
     
     var loadingModel = LoadingViewModel()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        _ = UserLocationManager.sharedManager
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         startAnimation()

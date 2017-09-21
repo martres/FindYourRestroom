@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zPh-z6-9YN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zPh-z6-9YN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,10 +15,6 @@
         <scene sceneID="QK3-80-vde">
             <objects>
                 <viewController storyboardIdentifier="LoadingViewController" id="zPh-z6-9YN" customClass="LoadingViewController" customModule="FindYourRestroom" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TD6-0L-BBb"/>
-                        <viewControllerLayoutGuide type="bottom" id="rzr-gR-KCF"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CsP-pi-s16">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,10 +42,11 @@
                             <constraint firstItem="2fp-UX-KFM" firstAttribute="centerY" secondItem="CsP-pi-s16" secondAttribute="centerY" id="AD9-pB-3S9"/>
                             <constraint firstItem="bPY-EF-zu8" firstAttribute="centerY" secondItem="CsP-pi-s16" secondAttribute="centerY" id="aYt-Oi-uM3"/>
                             <constraint firstItem="6fm-dR-UX1" firstAttribute="top" secondItem="2fp-UX-KFM" secondAttribute="bottom" constant="50" id="mpx-Ca-PSl"/>
-                            <constraint firstItem="6fm-dR-UX1" firstAttribute="centerX" secondItem="CsP-pi-s16" secondAttribute="centerX" id="sKh-P4-uWI"/>
-                            <constraint firstItem="bPY-EF-zu8" firstAttribute="centerX" secondItem="CsP-pi-s16" secondAttribute="centerX" id="vR2-Sd-Gy1"/>
-                            <constraint firstItem="2fp-UX-KFM" firstAttribute="centerX" secondItem="CsP-pi-s16" secondAttribute="centerX" id="vna-ck-ADn"/>
+                            <constraint firstItem="6fm-dR-UX1" firstAttribute="centerX" secondItem="Mnk-pg-WBT" secondAttribute="centerX" id="sKh-P4-uWI"/>
+                            <constraint firstItem="bPY-EF-zu8" firstAttribute="centerX" secondItem="Mnk-pg-WBT" secondAttribute="centerX" id="vR2-Sd-Gy1"/>
+                            <constraint firstItem="2fp-UX-KFM" firstAttribute="centerX" secondItem="Mnk-pg-WBT" secondAttribute="centerX" id="vna-ck-ADn"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mnk-pg-WBT"/>
                     </view>
                     <connections>
                         <outlet property="centerImageConstraint" destination="aYt-Oi-uM3" id="2co-7S-8lP"/>
@@ -65,10 +63,12 @@
         <scene sceneID="ige-Dq-9Rq">
             <objects>
                 <tabBarController storyboardIdentifier="mainTabBar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QEo-fc-0bz" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="t9s-Ab-v9r">
+                    <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="fill" id="t9s-Ab-v9r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.83137254900000002" green="0.88235294119999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="SeK-iU-15K" kind="relationship" relationship="viewControllers" id="XyW-gT-nri"/>
@@ -80,14 +80,21 @@
             </objects>
             <point key="canvasLocation" x="-334" y="283"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="xl2-ex-YEQ">
             <objects>
                 <navigationController id="SeK-iU-15K" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6el-Hf-zFe"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" selectedImage="map_selected" id="6el-Hf-zFe">
+                        <color key="badgeColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sC6-9U-XW5">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.83137254900000002" green="0.88235294119999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Q3z-TJ-CP1" kind="relationship" relationship="rootViewController" id="SVV-WP-wK6"/>
@@ -97,14 +104,10 @@
             </objects>
             <point key="canvasLocation" x="598" y="-107"/>
         </scene>
-        <!--Map Rest Room View Controller-->
+        <!--MAP-->
         <scene sceneID="3rl-jr-hNV">
             <objects>
                 <viewController storyboardIdentifier="MapRestRoomViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Q3z-TJ-CP1" customClass="MapRestRoomViewController" customModule="FindYourRestroom" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bc7-Uo-X79"/>
-                        <viewControllerLayoutGuide type="bottom" id="5bc-6Y-4ge"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cNO-66-ZQ0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,72 +118,88 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lJx-WE-m06" firstAttribute="leading" secondItem="cNO-66-ZQ0" secondAttribute="leading" id="9I3-8k-izN"/>
-                            <constraint firstItem="5bc-6Y-4ge" firstAttribute="top" secondItem="lJx-WE-m06" secondAttribute="bottom" id="ct7-z3-179"/>
-                            <constraint firstAttribute="trailing" secondItem="lJx-WE-m06" secondAttribute="trailing" id="dhb-PZ-yzr"/>
-                            <constraint firstItem="lJx-WE-m06" firstAttribute="top" secondItem="bc7-Uo-X79" secondAttribute="bottom" id="hIa-I1-SYE"/>
+                            <constraint firstItem="lJx-WE-m06" firstAttribute="leading" secondItem="heI-py-Qt8" secondAttribute="leading" id="9I3-8k-izN"/>
+                            <constraint firstItem="heI-py-Qt8" firstAttribute="bottom" secondItem="lJx-WE-m06" secondAttribute="bottom" id="ct7-z3-179"/>
+                            <constraint firstItem="heI-py-Qt8" firstAttribute="trailing" secondItem="lJx-WE-m06" secondAttribute="trailing" id="dhb-PZ-yzr"/>
+                            <constraint firstItem="lJx-WE-m06" firstAttribute="top" secondItem="heI-py-Qt8" secondAttribute="top" id="hIa-I1-SYE"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="heI-py-Qt8"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Nq5-Qa-CA3"/>
+                    <navigationItem key="navigationItem" title="MAP" id="Nq5-Qa-CA3">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="dD7-ef-0aV">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="map" destination="lJx-WE-m06" id="il9-y4-qGw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhz-XZ-pqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1298" y="-107"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="R1h-EU-lej">
             <objects>
                 <navigationController id="kc6-Z9-WQe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Xd2-Wo-X1i"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="Xd2-Wo-X1i"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="w5Q-BR-ixb">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.83137254900000002" green="0.88235294119999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6Q-ez-PYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598" y="1295"/>
+            <point key="canvasLocation" x="726" y="1579"/>
         </scene>
-        <!--List Rest Room View Controller-->
+        <!--LIST-->
         <scene sceneID="MJM-0r-Ywk">
             <objects>
                 <viewController storyboardIdentifier="ListRestRoomViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kme-nF-FSj" customClass="ListRestRoomViewController" customModule="FindYourRestroom" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Bx1-SM-agu"/>
-                        <viewControllerLayoutGuide type="bottom" id="pOz-eg-96l"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IhN-rF-mXp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Ve-Ij-H4M">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pOz-eg-96l" firstAttribute="top" secondItem="4Ve-Ij-H4M" secondAttribute="bottom" id="EHw-7A-sOj"/>
-                            <constraint firstItem="4Ve-Ij-H4M" firstAttribute="leading" secondItem="IhN-rF-mXp" secondAttribute="leading" id="leR-lp-0RK"/>
-                            <constraint firstAttribute="trailing" secondItem="4Ve-Ij-H4M" secondAttribute="trailing" id="tuM-8g-m7H"/>
-                            <constraint firstItem="4Ve-Ij-H4M" firstAttribute="top" secondItem="Bx1-SM-agu" secondAttribute="bottom" id="x4r-z9-pF8"/>
+                            <constraint firstItem="evJ-Vo-dUM" firstAttribute="bottom" secondItem="4Ve-Ij-H4M" secondAttribute="bottom" id="EHw-7A-sOj"/>
+                            <constraint firstItem="4Ve-Ij-H4M" firstAttribute="leading" secondItem="evJ-Vo-dUM" secondAttribute="leading" id="leR-lp-0RK"/>
+                            <constraint firstItem="evJ-Vo-dUM" firstAttribute="trailing" secondItem="4Ve-Ij-H4M" secondAttribute="trailing" id="tuM-8g-m7H"/>
+                            <constraint firstItem="4Ve-Ij-H4M" firstAttribute="top" secondItem="evJ-Vo-dUM" secondAttribute="top" id="x4r-z9-pF8"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="evJ-Vo-dUM"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8dz-TK-gfO"/>
+                    <navigationItem key="navigationItem" title="LIST" id="8dz-TK-gfO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfl-hu-YSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1730" y="997"/>
+            <point key="canvasLocation" x="1322" y="573"/>
         </scene>
-        <!--Item-->
+        <!--List-->
         <scene sceneID="FPF-9f-KJF">
             <objects>
                 <navigationController id="Y1i-vl-G56" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5Ss-ez-kRp"/>
+                    <tabBarItem key="tabBarItem" title="List" image="list" selectedImage="list_selected" id="5Ss-ez-kRp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tsi-wX-QMo">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.83137254900000002" green="0.88235294119999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
+                    <connections>
+                        <segue destination="Kme-nF-FSj" kind="relationship" relationship="rootViewController" id="ezN-mc-WyG"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KgK-wF-Ecj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,6 +207,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list" width="32" height="32"/>
+        <image name="list_selected" width="32" height="32"/>
         <image name="man_site_img" width="256" height="256"/>
+        <image name="map" width="32" height="32"/>
+        <image name="map_selected" width="32" height="32"/>
     </resources>
 </document>

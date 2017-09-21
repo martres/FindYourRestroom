@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import MapKit
 
 class MapRestRoomViewController: UIViewController {
+    
+    @IBOutlet weak var map: MKMapView!
+    
+    var mapModel = MapRestRoomViewModel()
     
     class func makeFromStoryBoard() -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MapRestRoomViewController")
@@ -16,6 +21,21 @@ class MapRestRoomViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        initMapView()
+    }
+    
+}
+
+extension MapRestRoomViewController: MKMapViewDelegate {
+    
+    func initMapView() {
+        map.delegate = self
+        map.addAnnotations(mapModel.restRoomsAnnotation)
+        map.showsUserLocation = true
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
     }
     
 }

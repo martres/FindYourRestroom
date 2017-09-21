@@ -29,6 +29,8 @@
 		65C1D1A41F72D1660036354C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C1D1A21F72D1660036354C /* Main.storyboard */; };
 		65C1D1A91F72D1660036354C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C1D1A81F72D1660036354C /* Assets.xcassets */; };
 		65C1D1AC1F72D1660036354C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C1D1AA1F72D1660036354C /* LaunchScreen.storyboard */; };
+		65CF8AF41F7417D5008A2939 /* RestRoomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CF8AF31F7417D5008A2939 /* RestRoomAnnotation.swift */; };
+		65CF8AF61F741942008A2939 /* UserLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CF8AF51F741942008A2939 /* UserLocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		65C1D1A81F72D1660036354C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65C1D1AB1F72D1660036354C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65C1D1AD1F72D1660036354C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65CF8AF31F7417D5008A2939 /* RestRoomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRoomAnnotation.swift; sourceTree = "<group>"; };
+		65CF8AF51F741942008A2939 /* UserLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 				652251871F73E19F00238CA3 /* RealmManager.swift */,
 				6522518B1F73E58A00238CA3 /* NavigationManager.swift */,
 				652251A01F73E90E00238CA3 /* FetchDataManager.swift */,
+				65CF8AF51F741942008A2939 /* UserLocationManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				652251891F73E1F700238CA3 /* RestRoom.swift */,
+				65CF8AF31F7417D5008A2939 /* RestRoomAnnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				6522519F1F73E7B800238CA3 /* FavorisRestRoomViewModel.swift in Sources */,
 				652251941F73E66600238CA3 /* ListRestRoomViewModel.swift in Sources */,
 				6522518A1F73E1F700238CA3 /* RestRoom.swift in Sources */,
+				65CF8AF41F7417D5008A2939 /* RestRoomAnnotation.swift in Sources */,
 				652251921F73E65900238CA3 /* MapRestRoomViewModel.swift in Sources */,
 				65C1D19F1F72D1660036354C /* AppDelegate.swift in Sources */,
 				652251851F73E14400238CA3 /* URLManager.swift in Sources */,
@@ -356,6 +363,7 @@
 				652251A41F73F04700238CA3 /* RestRoomService.swift in Sources */,
 				6522518E1F73E5B600238CA3 /* MapRestRoomViewController.swift in Sources */,
 				652251A11F73E90E00238CA3 /* FetchDataManager.swift in Sources */,
+				65CF8AF61F741942008A2939 /* UserLocationManager.swift in Sources */,
 				6522518C1F73E58A00238CA3 /* NavigationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
