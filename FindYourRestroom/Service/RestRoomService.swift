@@ -25,4 +25,14 @@ class RestRoomService {
             completion(result.result.value ?? [], result.result.error)
         }
     }
+    
+    class func getRestRoomSave(withFilter: String? = nil) -> [RestRoom] {
+        do {
+            let restRoomsResult = try RealmManager.get(objectType: RestRoom.self, filter: withFilter)
+            return restRoomsResult.toArray()
+        } catch {
+            print(error)
+            return []
+        }
+    }
 }

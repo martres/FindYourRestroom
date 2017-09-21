@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+class LoadingViewModel  {
+        
+    func fetchRestRoom(completion: @escaping (_ success: Bool) -> ()) {
+        RestRoomService.getRestRooms { (restRooms, error) in
+            if let _ = error {
+                if RestRoomService.getRestRoomSave().isEmpty {
+                    return completion(false)
+                }
+            }
+            return completion(true)
+        }
+    }
+    
+}
