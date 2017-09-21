@@ -22,15 +22,36 @@ class ListRestRoomViewController: UIViewController {
     }
     
     func initRestRoomTableView() {
-        self.restRoomTableView.delegate = self
-        self.restRoomTableView.dataSource = self
+        restRoomTableView.delegate = self
+        restRoomTableView.dataSource = self
+        restRoomTableView.estimatedRowHeight = 70
+        restRoomTableView.rowHeight = UITableViewAutomaticDimension
+        
+        let nib = UINib(nibName: ListRestRoomTableViewCell.identifier, bundle: nil)
+        restRoomTableView.register(nib, forCellReuseIdentifier: ListRestRoomTableViewCell.identifier)
     }
 }
 
 extension ListRestRoomViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
 }
 
 extension ListRestRoomViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+    }
     
 }
