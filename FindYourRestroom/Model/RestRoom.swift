@@ -19,7 +19,7 @@ class RestRoom: Object, Mappable {
     dynamic var openDate = ""
     dynamic var longitude = 0.0
     dynamic var latitude = 0.0
-    dynamic var favoris = false
+    dynamic var favorite = false
     
     override static func primaryKey() -> String {
         return "id"
@@ -40,5 +40,13 @@ class RestRoom: Object, Mappable {
         arrayCoord      <- map["fields.geom_x_y"]
         latitude = arrayCoord?[0] ?? 0
         longitude = arrayCoord?[1] ?? 0
+    }
+    
+    override static func ignoredProperties() -> [String] {
+        return ["favorite"]
+    }
+    
+    func updateFavorite(valueFavorite: Bool) {
+        try! RealmManager.update(type: RestRoom.self, changes: ["favorite": valueFavorite as AnyObject])
     }
 }

@@ -13,7 +13,9 @@ typealias RestRoomsResult = (_ restRooms: [RestRoom], _ error: Error?) -> ()
 
 class RestRoomService {
     
-    class func getRestRooms(completion: @escaping RestRoomResult) {
-        
+    class func getRestRooms(completion: @escaping RestRoomsResult) {
+        FetchDataManager.get(url: URLManager.urlForRestrooms()).responseArray(queue: nil, keyPath: "records", context: nil) { (result: DataResponse<[RestRoom]>) in
+            completion(result.result.value ?? [], result.result.error)
+        }
     }
 }
