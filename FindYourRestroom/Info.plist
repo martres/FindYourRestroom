@@ -45,5 +45,7 @@
 	<string>We need your location if you want to find a restroom :)</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>We need your location if you want to find a restroom :)</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
 </dict>
 </plist>

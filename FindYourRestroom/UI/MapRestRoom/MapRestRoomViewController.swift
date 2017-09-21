@@ -47,11 +47,6 @@ extension MapRestRoomViewController: MKMapViewDelegate {
         }
     }
     
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print("TEST")
-    }
-    
-    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let annot = annotation as? RestRoomAnnotation else {
             return nil
@@ -72,8 +67,8 @@ extension MapRestRoomViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        if let annotation = view.annotation as? RestRoomAnnotation {
-            
+        if let annotation = view.annotation as? RestRoomAnnotation, let restRoom = annotation.restRoom {
+            NavigationManager.showViewDetail(restRoom: restRoom)
         }
     }
     

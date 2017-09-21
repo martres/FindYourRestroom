@@ -29,7 +29,22 @@ class NavigationManager {
         }, completion: nil)
     }
     
-    class func showViewDetail(fromVc: UIViewController, restRoom: RestRoom) {
-        let vc =
+    class func showViewDetail(fromVc: UIViewController? = nil, restRoom: RestRoom) {
+        guard let vc = DetailRestRoomViewController.makeFromStoryboard() as? DetailRestRoomViewController else {
+            return
+        }
+        
+        let model = DetailRestRoomViewModel(restRoom: restRoom)
+        vc.detailModel = model
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        if fromVc == nil {
+            guard let window = UIApplication.shared.keyWindow, let rootVC = window.rootViewController else {
+                return
+            }
+            rootVC.present(vc, animated: true, completion: nil)
+        } else {
+            fromVc?.present(vc, animated: true, completion: nil)
+        }
     }
 }

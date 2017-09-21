@@ -159,16 +159,16 @@
         <!--Detail Rest Room View Controller-->
         <scene sceneID="UZH-4V-4jQ">
             <objects>
-                <viewController id="Omp-Bt-cFf" customClass="DetailRestRoomViewController" customModule="FindYourRestroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailRestRoomViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Omp-Bt-cFf" customClass="DetailRestRoomViewController" customModule="FindYourRestroom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gNK-DB-kOV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzA-rq-BdH">
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzA-rq-BdH">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pins_toilet" translatesAutoresizingMaskIntoConstraints="NO" id="TaG-Sn-c5c">
-                                        <rect key="frame" x="149.5" y="25" width="75" height="75"/>
+                                        <rect key="frame" x="149.5" y="30" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="4wX-7V-1Cu"/>
                                             <constraint firstAttribute="width" constant="75" id="k3s-X0-bYc"/>
@@ -177,9 +177,16 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="TaG-Sn-c5c" firstAttribute="top" secondItem="yzA-rq-BdH" secondAttribute="top" constant="25" id="yLv-34-PBR"/>
+                                    <constraint firstItem="TaG-Sn-c5c" firstAttribute="top" secondItem="yzA-rq-BdH" secondAttribute="top" constant="30" id="yLv-34-PBR"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxr-IP-hWN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="dismissView" destination="Omp-Bt-cFf" eventType="touchUpInside" id="5Rf-Q2-goD"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmc-iS-bMS">
                                 <rect key="frame" x="37" y="183" width="300" height="300"/>
                                 <subviews>
@@ -240,16 +247,16 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iil-no-Ugv">
-                                        <rect key="frame" x="244" y="244" width="50" height="50"/>
+                                        <rect key="frame" x="259" y="259" width="35" height="35"/>
                                         <state key="normal" image="phone"/>
                                         <connections>
                                             <action selector="call" destination="Omp-Bt-cFf" eventType="touchUpInside" id="LxM-bq-j6W"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poc-x3-OEp">
-                                        <rect key="frame" x="6" y="244" width="50" height="50"/>
+                                        <rect key="frame" x="6" y="259" width="35" height="35"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="bAp-M0-zzQ"/>
+                                            <constraint firstAttribute="height" constant="35" id="bAp-M0-zzQ"/>
                                             <constraint firstAttribute="width" secondItem="poc-x3-OEp" secondAttribute="height" multiplier="1:1" id="cRx-mf-UEd"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="favorite"/>
@@ -259,7 +266,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1d-Wv-4zz">
-                                        <rect key="frame" x="125" y="244" width="50" height="50"/>
+                                        <rect key="frame" x="132.5" y="259" width="35" height="35"/>
                                         <state key="normal" title="Button" image="share"/>
                                         <connections>
                                             <action selector="share" destination="Omp-Bt-cFf" eventType="touchUpInside" id="46f-3u-yfv"/>
@@ -292,10 +299,15 @@
                             <constraint firstItem="tmc-iS-bMS" firstAttribute="centerX" secondItem="gNK-DB-kOV" secondAttribute="centerX" id="0bS-nk-sVS"/>
                             <constraint firstItem="tmc-iS-bMS" firstAttribute="centerY" secondItem="gNK-DB-kOV" secondAttribute="centerY" id="AZJ-AM-sZw"/>
                             <constraint firstItem="yzA-rq-BdH" firstAttribute="leading" secondItem="ZRt-dF-Jyl" secondAttribute="leading" id="FPP-gy-U04"/>
+                            <constraint firstItem="bxr-IP-hWN" firstAttribute="leading" secondItem="yzA-rq-BdH" secondAttribute="leading" id="LSX-2c-IZr"/>
                             <constraint firstItem="TaG-Sn-c5c" firstAttribute="centerX" secondItem="tmc-iS-bMS" secondAttribute="centerX" id="Ly2-4J-avq"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bxr-IP-hWN" secondAttribute="trailing" id="QGv-3P-qoN"/>
                             <constraint firstItem="yzA-rq-BdH" firstAttribute="bottom" secondItem="ZRt-dF-Jyl" secondAttribute="bottom" id="VbZ-UD-m9H"/>
                             <constraint firstItem="yzA-rq-BdH" firstAttribute="top" secondItem="ZRt-dF-Jyl" secondAttribute="top" id="bgn-k6-csT"/>
+                            <constraint firstItem="bxr-IP-hWN" firstAttribute="height" secondItem="yzA-rq-BdH" secondAttribute="height" id="e4i-AO-tyI"/>
+                            <constraint firstItem="bxr-IP-hWN" firstAttribute="top" secondItem="yzA-rq-BdH" secondAttribute="top" id="gYw-Z5-S7T"/>
                             <constraint firstItem="ZRt-dF-Jyl" firstAttribute="trailing" secondItem="yzA-rq-BdH" secondAttribute="trailing" id="iTe-dl-Ips"/>
+                            <constraint firstItem="bxr-IP-hWN" firstAttribute="width" secondItem="yzA-rq-BdH" secondAttribute="width" id="yQb-Vc-53g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZRt-dF-Jyl"/>
                     </view>
@@ -303,12 +315,14 @@
                         <outlet property="adresseLabel" destination="xaU-hb-FF1" id="BI6-Bk-0L0"/>
                         <outlet property="arrondissement" destination="YaX-0R-gfj" id="MuG-ah-x5Y"/>
                         <outlet property="coordinates" destination="MUb-mH-6Ch" id="jKf-Mz-Plj"/>
-                        <outlet property="openingDate" destination="4Zq-Jq-L2i" id="JSN-KC-bpp"/>
+                        <outlet property="favoriteButton" destination="poc-x3-OEp" id="JIT-rQ-Cee"/>
+                        <outlet property="mainView" destination="tmc-iS-bMS" id="Vaj-hR-EED"/>
+                        <outlet property="openingDate" destination="w45-Mn-tMi" id="qu0-mU-Rjk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfg-wG-zLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1696.8" y="1472.1139430284859"/>
+            <point key="canvasLocation" x="1601" y="1566"/>
         </scene>
         <!--LIST-->
         <scene sceneID="MJM-0r-Ywk">
