@@ -17,7 +17,7 @@ class DetailRestRoomViewModel {
     }
     
     func getAdresse() -> String {
-        return (restRoom?.numero_voie ?? "") + " " + (restRoom?.nom_voie ?? "")
+        return ((restRoom?.numero_voie ?? "") + " " + (restRoom?.nom_voie ?? "")).lowercased()
     }
     
     func getArrondissement() -> String {

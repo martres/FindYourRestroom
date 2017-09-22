@@ -56,7 +56,7 @@ class ListRestRoomViewModel {
     
     func getAdresse(atIndex: Int) -> String {
         let restRoom = restRooms[atIndex]
-        return (restRoom.numero_voie) + " " + (restRoom.nom_voie)
+        return ((restRoom.numero_voie) + " " + (restRoom.nom_voie)).lowercased()
     }
     
     func getArrondissement(atIndex: Int) -> String {

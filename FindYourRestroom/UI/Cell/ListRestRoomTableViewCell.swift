@@ -16,4 +16,16 @@ class ListRestRoomTableViewCell: UITableViewCell {
     @IBOutlet weak var adresseLabel: UILabel!
     @IBOutlet weak var openingDateLabel: UILabel!
     @IBOutlet weak var arrondissementLabel: UILabel!
+    @IBOutlet weak var viewContainer: UIView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        viewContainer.layer.cornerRadius = 8
+        viewContainer.layer.borderColor = UIColor.lightGray.cgColor
+        viewContainer.layer.borderWidth = 1
+        viewContainer.clipsToBounds = true
+        
+        selectionStyle = .none
+    }
 }

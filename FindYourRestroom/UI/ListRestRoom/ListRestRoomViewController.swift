@@ -40,7 +40,8 @@ class ListRestRoomViewController: UIViewController {
         restRoomTableView.tableFooterView = UIView()
         
         let refreshControl = UIRefreshControl()
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh data 😊")
+        let attributedString = NSAttributedString(string: "Pull to refresh data 😊", attributes: [NSForegroundColorAttributeName: UIColor.white])
+        refreshControl.attributedTitle = attributedString
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
         restRoomTableView.refreshControl = refreshControl
         
@@ -63,7 +64,7 @@ extension ListRestRoomViewController: UITableViewDelegate {
         guard let model = listModel else {
             return
         }
-        NavigationManager.showViewDetail(restRoom: model.restRooms[indexPath.row])
+        NavigationManager.showViewDetail(fromVc: self, restRoom: model.restRooms[indexPath.row])
     }
     
 }

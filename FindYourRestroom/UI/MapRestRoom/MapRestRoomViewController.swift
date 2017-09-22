@@ -91,7 +91,7 @@ extension MapRestRoomViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if let annotation = view.annotation as? RestRoomAnnotation, let restRoom = annotation.restRoom {
-            NavigationManager.showViewDetail(restRoom: restRoom)
+            NavigationManager.showViewDetail(fromVc: self, restRoom: restRoom)
         }
     }
     
