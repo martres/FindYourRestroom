@@ -24,4 +24,17 @@ class MapRestRoomViewModel {
             restRoomsAnnotation.append(RestRoomAnnotation(restRoom: item))
         }
     }
+    
+    func refreshData(completion: @escaping () -> ()) {
+        restRooms.removeAll()
+        restRoomsAnnotation.removeAll()
+        RestRoomService.getRestRooms {[weak self] (restRooms, error) in
+            guard let strongSelf = self else {
+                return
+            }
+            
+            strongSelf.getData()
+            completion()
+        }
+    }
 }

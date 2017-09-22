@@ -25,6 +25,19 @@ class MapRestRoomViewController: UIViewController {
         UserLocationManager.sharedManager.delegate = self
     }
     
+    //MARK: Action
+    
+    @IBAction func refreshData() {
+        mapModel.refreshData {
+            self.map.removeAnnotations(self.map.annotations)
+            self.addAnnotations()
+        }
+    }
+    
+    @IBAction func zoomUserLocation() {
+        locationDidUpdateToLocation(location: UserLocationManager.sharedManager.currentLocation!)
+    }
+    
 }
 
 extension MapRestRoomViewController: LocationUpdateProtocol {
@@ -42,6 +55,10 @@ extension MapRestRoomViewController: MKMapViewDelegate {
     func initMapView() {
         map.delegate = self
         map.showsUserLocation = true
+        addAnnotations()
+    }
+    
+    func addAnnotations() {
         for item in mapModel.restRoomsAnnotation {
             map.addAnnotation(item)
         }
