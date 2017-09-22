@@ -20,6 +20,7 @@ class RestRoom: Object, Mappable {
     dynamic var longitude = 0.0
     dynamic var latitude = 0.0
     dynamic var favorite = false
+    dynamic var distance = 0.0
     
     override static func primaryKey() -> String {
         return "id"
@@ -43,7 +44,11 @@ class RestRoom: Object, Mappable {
     }
     
     override static func ignoredPropertiesUpdating() -> [String] {
-        return ["favorite"]
+        return ["favorite", "distance"]
+    }
+    
+    func updateDistance(distance: Double) {
+        try! RealmManager.update(type: RestRoom.self, changes: ["id": self.id as AnyObject, "distance": distance as AnyObject])
     }
     
     func updateFavorite(valueFavorite: Bool) {

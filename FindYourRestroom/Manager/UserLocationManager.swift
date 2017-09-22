@@ -41,5 +41,10 @@ class UserLocationManager: NSObject, CLLocationManagerDelegate {
         }
     }
     
+    func getDistance(longitude: Double, latitude: Double) -> Double {
+        let location = CLLocation(latitude: latitude, longitude: longitude)
+        return currentLocation?.distance(from: location) ?? 0
+    }
+    
     
 }

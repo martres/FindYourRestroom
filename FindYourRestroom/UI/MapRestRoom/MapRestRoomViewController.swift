@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import SVProgressHUD
 
 class MapRestRoomViewController: UIViewController {
     
@@ -28,9 +29,11 @@ class MapRestRoomViewController: UIViewController {
     //MARK: Action
     
     @IBAction func refreshData() {
+        SVProgressHUD.show()
         mapModel.refreshData {
             self.map.removeAnnotations(self.map.annotations)
             self.addAnnotations()
+            SVProgressHUD.dismiss()
         }
     }
     
@@ -62,6 +65,9 @@ extension MapRestRoomViewController: MKMapViewDelegate {
         for item in mapModel.restRoomsAnnotation {
             map.addAnnotation(item)
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

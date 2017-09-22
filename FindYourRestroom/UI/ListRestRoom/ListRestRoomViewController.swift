@@ -39,8 +39,20 @@ class ListRestRoomViewController: UIViewController {
         restRoomTableView.rowHeight = UITableViewAutomaticDimension
         restRoomTableView.tableFooterView = UIView()
         
+        let refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh data 😊")
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        restRoomTableView.refreshControl = refreshControl
+        
         let nib = UINib(nibName: ListRestRoomTableViewCell.identifier, bundle: nil)
         restRoomTableView.register(nib, forCellReuseIdentifier: ListRestRoomTableViewCell.identifier)
+    }
+    
+    func refreshData() {
+        listModel?.refreshData {
+            self.restRoomTableView.reloadData()
+            self.restRoomTableView.refreshControl?.endRefreshing()
+        }
     }
 }
 

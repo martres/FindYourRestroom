@@ -9,11 +9,13 @@ PODS:
   - Realm/Headers (2.10.1)
   - RealmSwift (2.10.1):
     - Realm (= 2.10.1)
+  - SVProgressHUD (2.2.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - AlamofireObjectMapper (~> 4.0)
   - RealmSwift
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
@@ -21,7 +23,8 @@ SPEC CHECKSUMS:
   ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
   Realm: fc7a317a5c2c9ba91f5f235ede4e2ea76e9eba0c
   RealmSwift: 505ed6c15942a2e76f5cfa78a8667cfa997ee75b
+  SVProgressHUD: db27c54e6e18bc903341661fc9feb55e04905cc4
 
-PODFILE CHECKSUM: f94b6a0673a9ca201f43eb334171372280224385
+PODFILE CHECKSUM: 94fbabc0283fa04c8ded60a7d833abde6397aab0
 
 COCOAPODS: 1.2.0

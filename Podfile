@@ -9,5 +9,7 @@ target 'FindYourRestroom' do
   pod 'Alamofire', '~> 4.5'
   pod 'AlamofireObjectMapper', '~> 4.0'
   pod 'RealmSwift'
+  pod 'SVProgressHUD'
+
 
 end

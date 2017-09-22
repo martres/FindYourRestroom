@@ -22,7 +22,7 @@ class FavorisRestRoomViewController: UIViewController {
         if let vc = ListRestRoomViewController.makeFromStoryBoard() as? ListRestRoomViewController {
             let model = ListRestRoomViewModel(restRooms: modelFavoris.restRooms)
             vc.listModel = model
-            
+            vc.listModel?.filter = "favorite = 1"
             vc.willMove(toParentViewController: self)
             vc.view.frame = viewContainer.frame
             viewContainer.addSubview(vc.view)
