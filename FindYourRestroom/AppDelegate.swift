@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        setStatusBarBackgroundColor(color: #colorLiteral(red: 0.831372549, green: 0.8823529412, blue: 0.3411764706, alpha: 1))
+        setStatusBarBackgroundColor(color: #colorLiteral(red: 0.1333333333, green: 0.6549019608, blue: 0.9411764706, alpha: 1))
         UIApplication.shared.statusBarStyle = .lightContent
         return true
     }

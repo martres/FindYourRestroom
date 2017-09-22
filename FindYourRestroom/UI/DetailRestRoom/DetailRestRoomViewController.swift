@@ -17,6 +17,7 @@ class DetailRestRoomViewController: UIViewController {
     @IBOutlet weak var coordinates: UILabel!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var toiletImage: UIImageView!
     
     var detailModel: DetailRestRoomViewModel!
     
@@ -33,6 +34,9 @@ class DetailRestRoomViewController: UIViewController {
         
         mainView.layer.cornerRadius = 8
         mainView.clipsToBounds = true
+        
+        toiletImage.layer.cornerRadius = toiletImage.frame.size.width / 2
+        toiletImage.clipsToBounds = true
         
         favoriteButton.isSelected = detailModel.isFavorite()
     }

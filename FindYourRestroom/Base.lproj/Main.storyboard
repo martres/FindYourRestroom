@@ -37,7 +37,7 @@
                                 <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="0.83137254900000002" green="0.88235294119999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2fp-UX-KFM" firstAttribute="centerY" secondItem="CsP-pi-s16" secondAttribute="centerY" id="AD9-pB-3S9"/>
                             <constraint firstItem="bPY-EF-zu8" firstAttribute="centerY" secondItem="CsP-pi-s16" secondAttribute="centerY" id="aYt-Oi-uM3"/>
@@ -63,11 +63,11 @@
         <scene sceneID="ige-Dq-9Rq">
             <objects>
                 <tabBarController storyboardIdentifier="mainTabBar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QEo-fc-0bz" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="fill" id="t9s-Ab-v9r">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" itemPositioning="fill" id="t9s-Ab-v9r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.83137254900000002" green="0.88235294119999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
@@ -108,7 +108,7 @@
             <objects>
                 <viewController storyboardIdentifier="MapRestRoomViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Q3z-TJ-CP1" customClass="MapRestRoomViewController" customModule="FindYourRestroom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cNO-66-ZQ0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lJx-WE-m06">
@@ -188,17 +188,17 @@
             <objects>
                 <viewController storyboardIdentifier="FavorisRestRoomViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="97g-w8-zmH" customClass="FavorisRestRoomViewController" customModule="FindYourRestroom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XwP-Dr-9Gs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any favorites 😩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Kb-xY-u4W">
-                                <rect key="frame" x="62" y="323" width="251" height="21"/>
+                                <rect key="frame" x="62" y="298.5" width="251" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" red="0.83137254900000002" green="0.88235294119999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPJ-nB-Tf2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="638"/>
+                                <rect key="frame" x="0.0" y="10" width="375" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -206,10 +206,10 @@
                         <constraints>
                             <constraint firstItem="fPJ-nB-Tf2" firstAttribute="centerX" secondItem="vf6-93-5Ap" secondAttribute="centerX" id="0hd-SF-A6J"/>
                             <constraint firstItem="3Kb-xY-u4W" firstAttribute="centerY" secondItem="XwP-Dr-9Gs" secondAttribute="centerY" id="IID-uj-ael"/>
-                            <constraint firstItem="fPJ-nB-Tf2" firstAttribute="top" secondItem="XwP-Dr-9Gs" secondAttribute="top" id="NSZ-7A-LnW"/>
                             <constraint firstItem="3Kb-xY-u4W" firstAttribute="centerX" secondItem="XwP-Dr-9Gs" secondAttribute="centerX" id="NzR-t4-kEK"/>
                             <constraint firstItem="fPJ-nB-Tf2" firstAttribute="centerY" secondItem="vf6-93-5Ap" secondAttribute="centerY" id="W5R-wu-JI9"/>
                             <constraint firstItem="fPJ-nB-Tf2" firstAttribute="width" secondItem="XwP-Dr-9Gs" secondAttribute="width" id="g6y-yZ-rl9"/>
+                            <constraint firstItem="fPJ-nB-Tf2" firstAttribute="height" secondItem="XwP-Dr-9Gs" secondAttribute="height" id="tBQ-cG-toJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vf6-93-5Ap"/>
                     </view>
@@ -249,7 +249,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.83137254900000002" green="0.88235294119999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="bxr-IP-hWN" firstAttribute="width" secondItem="yzA-rq-BdH" secondAttribute="width" id="6Ma-Tp-RX0"/>
                                     <constraint firstItem="bxr-IP-hWN" firstAttribute="height" secondItem="yzA-rq-BdH" secondAttribute="height" id="6ss-Ro-iB9"/>
@@ -262,6 +262,7 @@
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pins_toilet" translatesAutoresizingMaskIntoConstraints="NO" id="TaG-Sn-c5c">
                                 <rect key="frame" x="150" y="45" width="75" height="75"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="4wX-7V-1Cu"/>
                                     <constraint firstAttribute="width" constant="75" id="k3s-X0-bYc"/>
@@ -276,49 +277,49 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADRESSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBt-f1-9Qr">
                                                 <rect key="frame" x="0.0" y="0.0" width="54.5" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" red="0.83137254900000002" green="0.88235294119999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaU-hb-FF1">
                                                 <rect key="frame" x="0.0" y="26.5" width="46" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" red="0.52027302613154214" green="0.78802790947411161" blue="0.46815035178287545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARRONDISSEMENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbh-2B-gR6">
                                                 <rect key="frame" x="0.0" y="53" width="110.5" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" red="0.83137254900000002" green="0.88235294119999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaX-0R-gfj">
                                                 <rect key="frame" x="0.0" y="79.5" width="46" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" red="0.52027302610000004" green="0.78802790950000001" blue="0.46815035179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OPENING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zq-Jq-L2i">
                                                 <rect key="frame" x="0.0" y="106" width="54.5" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" red="0.83137254900000002" green="0.88235294119999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ouverture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w45-Mn-tMi">
                                                 <rect key="frame" x="0.0" y="132.5" width="57" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" red="0.52027302610000004" green="0.78802790950000001" blue="0.46815035179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS COORDINATES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0Q-We-w4d">
                                                 <rect key="frame" x="0.0" y="159" width="113" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" red="0.83137254900000002" green="0.88235294119999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS Coordinates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUb-mH-6Ch">
                                                 <rect key="frame" x="0.0" y="185.5" width="96.5" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" red="0.52027302610000004" green="0.78802790950000001" blue="0.46815035179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -394,6 +395,7 @@
                         <outlet property="favoriteButton" destination="poc-x3-OEp" id="JIT-rQ-Cee"/>
                         <outlet property="mainView" destination="tmc-iS-bMS" id="Vaj-hR-EED"/>
                         <outlet property="openingDate" destination="w45-Mn-tMi" id="qu0-mU-Rjk"/>
+                        <outlet property="toiletImage" destination="TaG-Sn-c5c" id="kz7-Md-T9P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfg-wG-zLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -405,12 +407,12 @@
             <objects>
                 <viewController storyboardIdentifier="ListRestRoomViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kme-nF-FSj" customClass="ListRestRoomViewController" customModule="FindYourRestroom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IhN-rF-mXp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Ve-Ij-H4M">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                                <color key="backgroundColor" red="0.83137254900000002" green="0.88235294119999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -454,17 +456,17 @@
     </scenes>
     <resources>
         <image name="cancel" width="64" height="64"/>
-        <image name="favorite" width="64" height="64"/>
-        <image name="favorite_selected" width="64" height="64"/>
+        <image name="favorite" width="128" height="128"/>
+        <image name="favorite_selected" width="128" height="128"/>
         <image name="list" width="32" height="32"/>
         <image name="list_selected" width="32" height="32"/>
         <image name="man_site_img" width="256" height="256"/>
         <image name="map" width="32" height="32"/>
         <image name="map_selected" width="32" height="32"/>
-        <image name="phone" width="64" height="64"/>
-        <image name="pins_toilet" width="64" height="64"/>
+        <image name="phone" width="128" height="128"/>
+        <image name="pins_toilet" width="128" height="128"/>
         <image name="refresh" width="128" height="128"/>
-        <image name="share" width="64" height="64"/>
-        <image name="zoom_user" width="64" height="64"/>
+        <image name="share" width="128" height="128"/>
+        <image name="zoom_user" width="128" height="128"/>
     </resources>
 </document>
